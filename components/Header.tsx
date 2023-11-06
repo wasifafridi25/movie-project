@@ -1,7 +1,24 @@
 import { SearchIcon, BellIcon } from "@heroicons/react/solid";
 import Link from "next/link";
+import { useState, useEffect } from 'react'
 
 export default function Header() {
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            window.scrollY > 0 ? setIsScrolled(true) : setIsScrolled(false)
+        }
+        window.addEventListener("scroll", handleScroll)
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+
+    }, [])
+
+
+
   return (
     <header>
       <div className="flex items-center space-x-2 md:space-x-10">

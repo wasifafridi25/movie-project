@@ -35,7 +35,7 @@ export default function Home({
       </Head>
       <Header />
       <main>
-        <Banner />
+        <Banner netflixOriginals={netflixOriginals}/>
         <section>
           {/* Row */}
           {/* Row */}
@@ -48,6 +48,7 @@ export default function Home({
   );
 }
 
+//we can only do server side rendering on pages and not on components
 export const getServerSideProps = async () => {
   const [
     netflixOriginals,

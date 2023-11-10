@@ -17,7 +17,7 @@ export default function Banner({ netflixOriginals }: Props) {
   }, [netflixOriginals]);
 
   return (
-    <div className="flex flex-col p-16 space-y-2 md:space-y-4 lg:h-[65vh] justify-end pb-12">
+    <div className="flex flex-col pt-60 space-y-2 md:space-y-4 lg:h-[65vh] justify-end">
       <div className="absolute top-0 left-0 h-[95vh] w-full -z-10">
         <Image
           alt="Banner cover"
@@ -27,10 +27,16 @@ export default function Banner({ netflixOriginals }: Props) {
           objectFit="cover"
         />
       </div>
-        <h1 className="text-2xl lg:text-7xl md:text-4xl font-bold">
-          {movie?.title || movie?.name || movie?.original_name}
-        </h1>
-        <p className="max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">{movie?.overview}</p>
+      <h1 className="text-2xl lg:text-7xl md:text-4xl font-bold">
+        {movie?.title || movie?.name || movie?.original_name}
+      </h1>
+      <p className="max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">
+        {movie?.overview}
+      </p>
+      <div>
+        <button></button>
+        <button></button>
+      </div>
     </div>
   );
 }

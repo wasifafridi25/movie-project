@@ -34,7 +34,7 @@ export default function Home({
         <title>Home - Netflix</title>
       </Head>
       <Header />
-      <main className="pl-4">
+      <main className="pl-4 relative pb-24 lg:space-y-24 lg:pl-16">
         <Banner netflixOriginals={netflixOriginals}/>
         <section>
           {/* Row */}

@@ -4,6 +4,7 @@ import { Movie } from "@/typings";
 import requests from "@/utils/requests";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import Row from "../components/Row";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,12 +36,17 @@ export default function Home({
       </Head>
       <Header />
       <main className="pl-4 relative pb-24 lg:space-y-24 lg:pl-16">
-        <Banner netflixOriginals={netflixOriginals}/>
-        <section>
-          {/* Row */}
-          {/* Row */}
-          {/* Row */}
-          {/* Row */}
+        <Banner netflixOriginals={netflixOriginals} />
+        <section className="space-y-12">
+          <Row title="Trending Now" movies={trendingNow} />
+          <Row title="Top Rated" movies={topRated} />
+          <Row title="Action Thrillers" movies={actionMovies} />
+          {/* My List Component
+          {list.length > 0 && <Row title="My List" movies={list} />} */}
+          <Row title="Comedies" movies={comedyMovies} />
+          <Row title="Scary Movies" movies={horrorMovies} />
+          <Row title="Romance Movies" movies={romanceMovies} />
+          <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
       {/* Modal */}

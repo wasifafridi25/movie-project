@@ -34,7 +34,7 @@ const AuthContext = createContext<IAuth>({
   loading: false,
 });
 
-//name it different from your filename 
+//if use arrow function can use directly, but here since normal function and has return type, need to store in variable
 export default function useAuth({ children }: useAuthProps){
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState<User | null>(null);
@@ -56,7 +56,7 @@ export default function useAuth({ children }: useAuthProps){
 
         setInitialLoading(false)
     })
-  }, [auth])
+  }, [auth, router])
 
   const signUp = async (email: string, password: string) => {
     setLoading(true);

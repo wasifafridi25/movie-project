@@ -26,4 +26,9 @@
     @apply w-full rounded px-5 py-3.5 bg-[#333] placeholder-[gray] outline-none focus:bg-[#454545]
     focus:border-b-2 focus:border-red-500
   }
+
+  .modalButton{
+    @apply flex items-center justify-center h-11 w-11 rounded-full border-2 border-[gray] 
+    hover:border-white transition bg-[#2a2a2a]/60 hover:bg-white/10
+  }
 }

@@ -9,8 +9,7 @@ import { useRecoilValue } from "recoil";
 import { modalState } from "@/atom/modalAtom";
 import Modal from "@/components/Modal";
 
-const inter = Inter({ subsets: ["latin"] });
-const showModal = useRecoilValue(modalState)
+// const showModal = useRecoilValue(modalState)
 
 interface Props {
   netflixOriginals: Movie[];
@@ -53,7 +52,7 @@ export default function Home({
           <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
-      {showModal && <Modal/>}
+      {<Modal/>}
     </div>
   );
 }
